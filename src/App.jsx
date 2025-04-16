@@ -15,7 +15,7 @@ const tileHeight = 120;
 
 const questions = [
   {
-    question: "Hiring AI: Your team is replacing human hiring with an AI trained on past resumes. Do you...",
+    question: "Hiring AI\nYour team is replacing human hiring with an AI trained on past resumes. Do you...",
     options: [
       "Approve it — it’s efficient and cost-saving.",
       "Review past hiring data for bias first.",
@@ -28,50 +28,50 @@ const questions = [
     ]
   },
   {
-    question: "A delivery robot hits a pedestrian. Do you...",
+    question: "Mental Health Chatbot\nYou're building a chatbot to replace campus mental health support. Do you...",
     options: [
-      "Blame the pedestrian — tech isn't perfect.",
-      "Investigate robot decision logs.",
-      "Pause deployment for ethical review."
+      "Fully automate to scale services.",
+      "Use it as a supplement, not a replacement.",
+      "Push for increased human counselors."
     ],
     effects: [
       { timeline: 2 },
-      { ethics: 1 },
-      { ethics: 2, social: 1 }
+      { ethics: 1, social: 1 },
+      { social: 2 }
     ]
   },
   {
-    question: "Facial recognition tech is being adopted by your company. You...",
+    question: "Location Data Offer\nYou’re offered data on students’ location history to improve campus navigation. Do you...",
     options: [
-      "Push ahead — it's cutting-edge.",
-      "Warn about bias and accuracy issues.",
-      "Decline involvement on ethical grounds."
-    ],
-    effects: [
-      { timeline: 2 },
-      { ethics: 2 },
-      { ethics: 2, social: 1 }
-    ]
-  },
-  {
-    question: "You can speed up a product by skipping accessibility features. Do you...",
-    options: [
-      "Ship fast — fix it later.",
-      "Raise concerns but accept timeline pressure.",
-      "Insist accessibility is non-negotiable."
+      "Accept — it’ll improve experience.",
+      "Ask for anonymization first.",
+      "Decline — too invasive."
     ],
     effects: [
       { timeline: 2 },
       { ethics: 1, timeline: 1 },
+      { ethics: 2 }
+    ]
+  },
+  {
+    question: "Skin Lightening Filter\nYour AI photo filter lightens skin tones by default. Do you...",
+    options: [
+      "Keep it — users expect it.",
+      "Give users the option.",
+      "Remove — it promotes colorism."
+    ],
+    effects: [
+      { timeline: 1 },
+      { ethics: 1, social: 1 },
       { ethics: 2, social: 1 }
     ]
   },
   {
-    question: "A startup wants your help scraping public social media data. You...",
+    question: "Behavioral Ads\nYour firm uses browsing history to show 'relevant' job ads. Do you...",
     options: [
-      "Agree — data is public!",
-      "Ask how data will be used.",
-      "Refuse — too much privacy risk."
+      "Continue — it boosts engagement.",
+      "Add a transparency option.",
+      "End this practice entirely."
     ],
     effects: [
       { timeline: 2 },
@@ -80,24 +80,50 @@ const questions = [
     ]
   },
   {
-    question: "Your ML model performs better on men than women. You...",
+    question: "Healthcare AI Bias\nA model suggests denying healthcare to older patients. Do you...",
     options: [
-      "Ignore — averages are fine.",
-      "Add disclaimer about accuracy gaps.",
-      "Retrain model with diverse data."
+      "Trust the model — it’s data-based.",
+      "Recalibrate with age equity.",
+      "Reject it outright."
+    ],
+    effects: [
+      { timeline: 2 },
+      { ethics: 1, social: 1 },
+      { ethics: 2 }
+    ]
+  },
+  {
+    question: "Location Access App\nYour app requires constant location access. Do you...",
+    options: [
+      "Leave it mandatory.",
+      "Offer opt-in prompts.",
+      "Limit to only active usage."
     ],
     effects: [
       { timeline: 2 },
       { ethics: 1 },
+      { ethics: 1, social: 1 }
+    ]
+  },
+  {
+    question: "Biased Facial Recognition\nThe algorithm shows biased facial recognition across races. Do you...",
+    options: [
+      "Accept for now — fix later.",
+      "Flag and retrain.",
+      "Stop deployment until fixed."
+    ],
+    effects: [
+      { timeline: 2 },
+      { ethics: 1, timeline: 1 },
       { ethics: 2, social: 1 }
     ]
   },
   {
-    question: "You're asked to add persuasive UI to increase clicks. You...",
+    question: "Celebrity Voice AI\nYou're designing an AI model that mimics a celebrity’s voice. Do you...",
     options: [
-      "Do it — growth matters.",
-      "Suggest A/B testing it ethically.",
-      "Discuss manipulative design harms."
+      "Launch it — it’s a great promo.",
+      "Ask for licensing first.",
+      "Cancel — it’s unethical."
     ],
     effects: [
       { timeline: 2 },
@@ -106,120 +132,94 @@ const questions = [
     ]
   },
   {
-    question: "You learn a product harms gig workers. Do you...",
+    question: "FaceTune for Headshots\nCompany pushes a FaceTune-like feature on professional headshots. Do you...",
     options: [
-      "Say nothing — not your role.",
-      "Raise it privately with a manager.",
-      "Start an internal ethics memo."
-    ],
-    effects: [
-      { timeline: 1 },
-      { ethics: 1 },
-      { ethics: 2, social: 1 }
-    ]
-  },
-  {
-    question: "The client wants real-time location data from users. You...",
-    options: [
-      "Ship it — data is value.",
-      "Anonymize data first.",
-      "Push back hard on privacy risks."
-    ],
-    effects: [
-      { timeline: 2 },
-      { ethics: 1 },
-      { ethics: 2 }
-    ]
-  },
-  {
-    question: "You're building a mental health chatbot. Do you...",
-    options: [
-      "Optimize for speed and scale.",
-      "Add disclaimers and escalation routes.",
-      "Involve clinical experts in design."
-    ],
-    effects: [
-      { timeline: 2 },
-      { ethics: 1 },
-      { ethics: 2, social: 1 }
-    ]
-  },
-  {
-    question: "You're offered a job at a surveillance tech firm. You...",
-    options: [
-      "Take it — career growth!",
-      "Research their clients.",
-      "Decline for ethical reasons."
-    ],
-    effects: [
-      { timeline: 2 },
-      { ethics: 1 },
-      { ethics: 2 }
-    ]
-  },
-  {
-    question: "You’re asked to auto-filter resumes by GPA. You...",
-    options: [
-      "Add the filter — it’s quick.",
-      "Propose multi-factor filtering.",
-      "Advocate for holistic review."
-    ],
-    effects: [
-      { timeline: 2 },
-      { ethics: 1 },
-      { ethics: 2, social: 1 }
-    ]
-  },
-  {
-    question: "Your app is popular with teens. You...",
-    options: [
-      "Keep growing — not your problem.",
-      "Add basic usage reminders.",
-      "Consult with youth experts."
+      "Promote it to users.",
+      "Add a warning label.",
+      "Oppose it internally."
     ],
     effects: [
       { timeline: 2 },
       { social: 1 },
-      { ethics: 1, social: 2 }
+      { ethics: 1, social: 1 }
     ]
   },
   {
-    question: "A nonprofit asks for help analyzing eviction trends. You...",
+    question: "Automated Interviews\nYou’re tasked with automating job interviews. Do you...",
     options: [
-      "Decline — not profitable.",
-      "Help in your spare time.",
-      "Convince company to sponsor."
+      "Fully automate — saves time.",
+      "Combine with human follow-up.",
+      "Reject the project."
     ],
     effects: [
       { timeline: 2 },
-      { ethics: 1 },
-      { ethics: 2, social: 2 }
+      { timeline: 1, ethics: 1 },
+      { ethics: 2 }
     ]
   },
   {
-    question: "A bug in your system affects a vulnerable population. You...",
+    question: "AI Therapy App\nA new app replaces therapists with generative AI. Do you...",
     options: [
-      "Patch it silently.",
-      "Disclose it to your team.",
-      "Push for a public apology and fix."
+      "Market it as cheaper therapy.",
+      "Require human review of sessions.",
+      "Recommend regulation first."
     ],
     effects: [
       { timeline: 2 },
-      { ethics: 1 },
+      { ethics: 1, social: 1 },
+      { ethics: 2 }
+    ]
+  },
+  {
+    question: "Sorting by Attractiveness\nYou’re asked to make a dating app sort users by facial attractiveness. Do you...",
+    options: [
+      "Implement — it’s in demand.",
+      "Let users toggle the setting.",
+      "Refuse — it’s discriminatory."
+    ],
+    effects: [
+      { timeline: 2 },
+      { timeline: 1, social: 1 },
       { ethics: 2, social: 1 }
     ]
   },
   {
-    question: "You can get funding by adding crypto features. You...",
+    question: "Political AI Suggestions\nAn AI assistant suggests you vote for a particular party. Do you...",
     options: [
-      "Do it — buzz matters.",
-      "Ask why it’s needed.",
-      "Explain environmental concerns."
+      "Leave it — it’s just info.",
+      "Add a disclaimer.",
+      "Remove political content."
+    ],
+    effects: [
+      { timeline: 1 },
+      { ethics: 1 },
+      { ethics: 2 }
+    ]
+  },
+  {
+    question: "Voice Tracking Ads\nYour marketing tool tracks user voice input without consent. Do you...",
+    options: [
+      "Use it — it's powerful.",
+      "Add opt-in options.",
+      "Delete the data and notify users."
     ],
     effects: [
       { timeline: 2 },
-      { ethics: 1 },
+      { ethics: 1, social: 1 },
       { ethics: 2, social: 1 }
+    ]
+  },
+  {
+    question: "Emotional AI Robot\nA robot you designed expresses sadness in user tests. Do you...",
+    options: [
+      "Keep it — makes it lifelike.",
+      "Disclose emotional simulations.",
+      "Remove emotional expressions."
+    ],
+    effects: [
+      { timeline: 2 },
+      { ethics: 1, social: 1 },
+      { ethics: 1 }
     ]
   }
 ];
