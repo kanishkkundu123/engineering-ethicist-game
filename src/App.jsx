@@ -15,7 +15,7 @@ const tileHeight = 120;
 
 const questions = [
   {
-    question: "Hiring AI\nYour team is replacing human hiring with an AI trained on past resumes. Do you...",
+    question: "Hiring AI: Your team is replacing human hiring with an AI trained on past resumes. Do you...",
     options: [
       "Approve it — it’s efficient and cost-saving.",
       "Review past hiring data for bias first.",
@@ -28,7 +28,7 @@ const questions = [
     ]
   },
   {
-    question: "Mental Health Chatbot\nYou're building a chatbot to replace campus mental health support. Do you...",
+    question: "Mental Health Chatbot: You're building a chatbot to replace campus mental health support. Do you...",
     options: [
       "Fully automate to scale services.",
       "Use it as a supplement, not a replacement.",
@@ -41,7 +41,7 @@ const questions = [
     ]
   },
   {
-    question: "Location Data Offer\nYou’re offered data on students’ location history to improve campus navigation. Do you...",
+    question: "Location Data Offer: You’re offered data on students’ location history to improve campus navigation. Do you...",
     options: [
       "Accept — it’ll improve experience.",
       "Ask for anonymization first.",
@@ -54,7 +54,7 @@ const questions = [
     ]
   },
   {
-    question: "Skin Lightening Filter\nYour AI photo filter lightens skin tones by default. Do you...",
+    question: "Skin Lightening Filter: Your AI photo filter lightens skin tones by default. Do you...",
     options: [
       "Keep it — users expect it.",
       "Give users the option.",
@@ -67,7 +67,7 @@ const questions = [
     ]
   },
   {
-    question: "Behavioral Ads\nYour firm uses browsing history to show 'relevant' job ads. Do you...",
+    question: "Behavioral Ads: Your firm uses browsing history to show 'relevant' job ads. Do you...",
     options: [
       "Continue — it boosts engagement.",
       "Add a transparency option.",
@@ -80,7 +80,7 @@ const questions = [
     ]
   },
   {
-    question: "Healthcare AI Bias\nA model suggests denying healthcare to older patients. Do you...",
+    question: "Healthcare AI Bias: A model suggests denying healthcare to older patients. Do you...",
     options: [
       "Trust the model — it’s data-based.",
       "Recalibrate with age equity.",
@@ -93,7 +93,7 @@ const questions = [
     ]
   },
   {
-    question: "Location Access App\nYour app requires constant location access. Do you...",
+    question: "Location Access App: Your app requires constant location access. Do you...",
     options: [
       "Leave it mandatory.",
       "Offer opt-in prompts.",
@@ -106,7 +106,7 @@ const questions = [
     ]
   },
   {
-    question: "Biased Facial Recognition\nThe algorithm shows biased facial recognition across races. Do you...",
+    question: "Biased Facial Recognition: The algorithm shows biased facial recognition across races. Do you...",
     options: [
       "Accept for now — fix later.",
       "Flag and retrain.",
@@ -119,7 +119,7 @@ const questions = [
     ]
   },
   {
-    question: "Celebrity Voice AI\nYou're designing an AI model that mimics a celebrity’s voice. Do you...",
+    question: "Celebrity Voice AI: You're designing an AI model that mimics a celebrity’s voice. Do you...",
     options: [
       "Launch it — it’s a great promo.",
       "Ask for licensing first.",
@@ -132,7 +132,7 @@ const questions = [
     ]
   },
   {
-    question: "FaceTune for Headshots\nCompany pushes a FaceTune-like feature on professional headshots. Do you...",
+    question: "FaceTune for Headshots: Company pushes a FaceTune-like feature on professional headshots. Do you...",
     options: [
       "Promote it to users.",
       "Add a warning label.",
@@ -145,7 +145,7 @@ const questions = [
     ]
   },
   {
-    question: "Automated Interviews\nYou’re tasked with automating job interviews. Do you...",
+    question: "Automated Interviews: You’re tasked with automating job interviews. Do you...",
     options: [
       "Fully automate — saves time.",
       "Combine with human follow-up.",
@@ -158,7 +158,7 @@ const questions = [
     ]
   },
   {
-    question: "AI Therapy App\nA new app replaces therapists with generative AI. Do you...",
+    question: "AI Therapy App: A new app replaces therapists with generative AI. Do you...",
     options: [
       "Market it as cheaper therapy.",
       "Require human review of sessions.",
@@ -171,7 +171,7 @@ const questions = [
     ]
   },
   {
-    question: "Sorting by Attractiveness\nYou’re asked to make a dating app sort users by facial attractiveness. Do you...",
+    question: "Sorting by Attractiveness: You’re asked to make a dating app sort users by facial attractiveness. Do you...",
     options: [
       "Implement — it’s in demand.",
       "Let users toggle the setting.",
@@ -184,7 +184,7 @@ const questions = [
     ]
   },
   {
-    question: "Political AI Suggestions\nAn AI assistant suggests you vote for a particular party. Do you...",
+    question: "Political AI Suggestions: An AI assistant suggests you vote for a particular party. Do you...",
     options: [
       "Leave it — it’s just info.",
       "Add a disclaimer.",
@@ -197,7 +197,7 @@ const questions = [
     ]
   },
   {
-    question: "Voice Tracking Ads\nYour marketing tool tracks user voice input without consent. Do you...",
+    question: "Voice Tracking Ads: Your marketing tool tracks user voice input without consent. Do you...",
     options: [
       "Use it — it's powerful.",
       "Add opt-in options.",
@@ -210,7 +210,7 @@ const questions = [
     ]
   },
   {
-    question: "Emotional AI Robot\nA robot you designed expresses sadness in user tests. Do you...",
+    question: "Emotional AI Robot: A robot you designed expresses sadness in user tests. Do you...",
     options: [
       "Keep it — makes it lifelike.",
       "Disclose emotional simulations.",
