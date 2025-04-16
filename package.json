@@ -1,6 +1,5 @@
-
 {
-  "name": "engineering-ethicist",
+  "name": "engineering-ethicist-game",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
@@ -8,12 +7,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^11.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "framer-motion": "^10.12.16"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "vite": "^4.0.0",
-    "@vitejs/plugin-react": "^4.0.0"
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.4.9"
   }
 }
